@@ -89,9 +89,10 @@ client.on('messageCreate', async (message) => {
         .setDescription(baseToken.symbol || 'Not available')
         .setImage('attachment://chart.png') 
         .setFooter({
-          text: 'i1n4r',
+          text: 'i1n4r', 
           iconURL: 'https://media.discordapp.net/attachments/1129236917481918577/1130347033283276830/f4d28f04f343e307161a931a5080c440.png',
-        })
+        }) // change to yours
+        
         .addFields(
           { name: 'Symbol', value: `${baseToken.symbol || 'Not available'}`, inline: false },
           { name: 'Buys', value: `${txns.h24?.buys !== undefined ? `${txns.h24.buys.toLocaleString()}` : 'Not available'}`, inline: true },
@@ -114,7 +115,7 @@ client.on('messageCreate', async (message) => {
         .setStyle(ButtonStyle.Link);
 
       const buttonOrange = new ButtonBuilder()
-        .setLabel('ORANGE')
+        .setLabel('ORANGE') // change to yours
         .setStyle(ButtonStyle.Success)
         .setCustomId('orange_button'); 
 
